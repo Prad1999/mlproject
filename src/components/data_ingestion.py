@@ -52,7 +52,7 @@ class DataIngestion:
             )
         except Exception as e:
             raise CustomException(e, sys)
-        
+         
 if __name__=="__main__":
     obj=DataIngestion()
     train_data, test_data = obj.initiate_data_ingestion()
@@ -64,3 +64,12 @@ if __name__=="__main__":
     print(modeltrainer.initiate_model_trainer(train_arr, test_arr))
 
 
+'''
+
+Data Ingestion: Reads raw data, splits it into training and testing sets, and saves them.
+
+Data Transformation: Applies preprocessing to the training and testing data.
+
+Model Training: Trains and evaluates multiple models, selects the best one, and saves it.
+
+'''
